@@ -1,0 +1,39 @@
+<div id="login">
+  <h3 class="text-center text-white pt-5">Login form</h3>
+  <div class="container">
+      <div id="login-row" class="row justify-content-center align-items-center">
+          <div id="login-column" class="col-md-6 login-column-bg">
+              <div id="login-box" class="col-md-12">
+                  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+                  <div *ngIf="success" class="alert alert-success">{{success}}</div>
+                  <h2>Login</h2>
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                      <div class="form-group">
+                          <label for="email">E-mail</label>
+                          <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                              <div *ngIf="f.email.errors.required">E-mail não pode ser vázio</div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="password">Senha</label>
+                          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                              <div *ngIf="f.password.errors.required">Senha não pode ser vazia</div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <button [disabled]="loading" class="btn btn-primary">
+                              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                              Login
+                          </button>
+                          <a routerLink="/component/register" class="btn btn-link">Registrar</a>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  
+

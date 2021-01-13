@@ -1,0 +1,1 @@
+export const baseURL: string = 'https://rest-api-tcc-prefeitura.herokuapp.com';

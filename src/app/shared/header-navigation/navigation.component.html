@@ -1,0 +1,28 @@
+<nav>
+    <!-- ============================================================== -->
+    <!--  -->
+    <!-- ============================================================== -->
+    <ul class="navbar-nav float-left mr-auto">  
+
+    </ul>
+    <!-- ============================================================== -->
+    <!--  -->
+    <!-- ============================================================== -->
+    <ul class="navbar-nav float-right nav-logout" *ngIf="currentUser">
+        <li class="nav-item">
+            <span class="nav-link"> Usuário: {{login.email}} </span>
+        </li>     
+        <!-- ============================================================== -->
+        <li class="nav-item ">
+            <a class=" nav-link " (click)="logout()">Logout</a>
+        </li> 
+    </ul>
+
+    <ul class="navbar-nav float-right nav-logout" *ngIf="!currentUser">
+        <!-- ============================================================== -->
+        <li class="nav-item ">
+            <a class=" nav-link " (click)="signin()">Login</a>
+          </li>     
+    </ul>
+</nav>
+

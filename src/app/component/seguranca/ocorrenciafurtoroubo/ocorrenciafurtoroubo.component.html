@@ -1,0 +1,40 @@
+
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Ocorrências de Roubo e Furto</h5>          
+        </div>
+        <div class="card-body">
+         
+              <agm-map 
+                [latitude]="lat"
+                [longitude]="long"
+                [zoom]="zoom"
+                [disableDefaultUI]="false"
+                [zoomControl]="false"
+                (mapClick)="mapClicked($event)">
+
+                <agm-marker 
+                    *ngFor="let m of homicidio; let i = index"
+                    (markerClick)="clickedMarker(m.label, i)"
+                    [latitude]="m.lat"
+                    [longitude]="m.long"
+                    [label]="m.quantidade"
+                    [markerDraggable]="m.draggable"
+                    (dragEnd)="markerDragEnd(m, $event)">                
+                
+                  
+                </agm-marker>     
+           
+            </agm-map>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
