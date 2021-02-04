@@ -1,13 +1,12 @@
 
-<div id="login">
-  <h3 class="text-center text-white pt-5">Formulário de registro</h3>
+<div id="login"> 
   <div class="container">
       <div id="login-row" class="row justify-content-center align-items-center">
           <div id="login-column" class="col-md-6 login-column-bg">
               <div id="login-box" class="col-md-12">
 
                 <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-                <h2>Register</h2>
+                <h2>Cadastro de Usuário</h2>
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <label for="firstName">First Name</label>
@@ -39,11 +38,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button [disabled]="loading" class="btn btn-primary">
+                        <button [disabled]="loading" class="btn btn-secondary">
                             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                             Registrar
                         </button>
-                        <a routerLink="/login" class="btn btn-link">Cancelar</a>
+                        <a routerLink="/login" class="btn btn-secondary">Cancelar</a>
                     </div>
                 </form>
 

@@ -19,7 +19,7 @@ export class QuadrosegurancaComponent implements OnInit {
   ngOnInit() {
     var hoje = new Date();
     var yyyy = hoje.getFullYear();
-    this.ano = yyyy;
+    this.ano = yyyy - 1;
 
     this.canvas = document.getElementById('myChartS');
     this.ctx = this.canvas.getContext('2d');
@@ -37,7 +37,7 @@ export class QuadrosegurancaComponent implements OnInit {
             datasets: [
               {
                 data: numeroTotal,
-                borderColor: '#2fba9f',
+                borderColor: '#F0F8FF',
                 fill: false
               }             
             ]

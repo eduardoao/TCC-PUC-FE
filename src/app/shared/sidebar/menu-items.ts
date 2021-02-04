@@ -42,7 +42,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/component/iptr',
-    title: 'IPTR',
+    title: 'ITR',
     icon: 'mdi mdi-blur-radial',
     class: '',
     extralink: false,

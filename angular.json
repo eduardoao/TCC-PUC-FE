@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-adminx": {
+    "TCC-PUC-FE": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -14,7 +14,10 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "allowedCommonJsDependencies": ["ng2-charts", "chart.js"],
+            "allowedCommonJsDependencies": [
+              "ng2-charts",
+              "chart.js"
+            ],
             "outputPath": "dist/TCC-PUC-FE",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -99,10 +102,14 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     },
-    "ng-adminx-e2e": {
+    "TCC-PUC-FE-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
