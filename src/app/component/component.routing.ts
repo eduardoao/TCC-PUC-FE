@@ -60,11 +60,11 @@ export const ComponentsRoutes: Routes = [
 				path: 'iptr',
 				component: IptrComponent,
 				data: {
-					title: 'IPTR',
+					title: 'ITR',
 					urls: [
 						{ title: 'Dashboard', url: '/dashboard' },
 						{ title: 'ngComponent' },
-						{ title: 'IPTR' }
+						{ title: 'ITR' }
 					]
 				},
 				canActivate: [AuthGuard]
