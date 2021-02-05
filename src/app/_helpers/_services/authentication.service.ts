@@ -29,8 +29,7 @@ export class AuthenticationService {
 
   
 
-    login(email: string, password: string) {
-        //return this.http.post<any>(`${baseURL}/users/authenticate`, { username, password })
+    login(email: string, password: string) {        
         return this.http.post<any>(`${baseURL}/login`, { email, password })
             .pipe(map(user => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -43,6 +42,6 @@ export class AuthenticationService {
     logout() {
         // remove user from local storage and set current user to null
         localStorage.removeItem('currentUser');        
-        //this.currentUserSubject.next(null);
+        this.currentUserSubject.next(null);
     }
 }
